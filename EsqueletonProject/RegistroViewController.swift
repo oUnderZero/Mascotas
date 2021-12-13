@@ -34,7 +34,6 @@ class RegistroViewController: UIViewController {
                     var ref: DocumentReference? = nil
                     ref = db.collection("Usuarios").addDocument(data: [
                         "email": email,
-                        "id_imagen": "Japan",
                         "uid": result.user.uid,
                         "id_imagen": "J8z0CjeEySLcOQu4rda4"
                     ]) { err in
