@@ -13,6 +13,7 @@ class EditarPerfilViewController: UIViewController {
     @IBOutlet weak var imagePerfil: UIImageView!
     let db = Firestore.firestore()
     @IBOutlet weak var nombreTextField: UITextField!
+    @IBOutlet weak var dirr: UITextView!
     var img: UIImage?
     var id_img: String?
     override func viewDidLoad() {
@@ -73,6 +74,16 @@ class EditarPerfilViewController: UIViewController {
     }
     @IBAction func tomarFoto(_ sender: UIBarButtonItem) {
         presentFotoActionSheet()
+    }
+    @IBAction func ubicacionBtn(_ sender: UIButton) {
+        performSegue(withIdentifier: "mapa", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapa" {
+            let objEdit = segue.destination as! MapaViewController
+            objEdit.direccion = self.dirr.text
+            
+        }
     }
     @IBAction func GuardarBtn(_ sender: UIBarButtonItem) {
         let defaults = UserDefaults.standard

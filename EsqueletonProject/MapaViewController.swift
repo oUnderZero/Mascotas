@@ -11,7 +11,7 @@ import CoreLocation
 
 class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var latitude: CLLocationDegrees?
-    
+    var direccion: String?
     @IBOutlet weak var mapMK: MKMapView!
     var longitude: CLLocationDegrees?
     
@@ -20,20 +20,19 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     var manager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        manager.delegate = self
+        
         mapMK.delegate = self
-        manager.requestWhenInUseAuthorization()
-        manager.requestLocation()
+       
         //mejorar la precision de la ubicacion
-        manager.desiredAccuracy = kCLLocationAccuracyBest
+       
         //    con este metodo se ira actualizando la ubicacion del usuario
-        manager.startUpdatingLocation()
+       
         mapMK.mapType = .standard
 ubi()        // Do any additional setup after loading the view.
     }
     
     func ubi(){
-        let direction: String? = "Av. Morelos Nte. 1500 col. Santiaguito, Morelia Michoacan, Mexico"
+        let direction: String? = direccion
         let geocoder = CLGeocoder()
         
         if let direction = direction{
@@ -61,9 +60,8 @@ ubi()        // Do any additional setup after loading the view.
                     let overlays = self.mapMK.overlays
 
                     let annotations = self.mapMK.annotations
-                    self.mapMK.removeOverlays(overlays)
-                    self.mapMK.removeAnnotations(annotations)
-                    self.makeRoute(destinationCoordinates: destinationRoute.coordinate)
+                    
+                    //self.makeRoute(destinationCoordinates: destinationRoute.coordinate)
                     
                 } else {
                     print("Error al encontrar la dirección: \(String(describing: error?.localizedDescription))")
