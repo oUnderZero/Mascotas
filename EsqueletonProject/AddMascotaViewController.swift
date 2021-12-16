@@ -88,13 +88,24 @@ class AddMascotaViewController: UIViewController {
                     "Edad": self.EdadText.text!,
                     "Nombre": self.NombreText.text!,
                     "Raza": self.RazaText.text!,
+                    "Peso": self.EdadText.text!,
                     "id_imagen": aidi,
-                    "uid": Auth.auth().currentUser?.uid ?? ""
+                    "uid": Auth.auth().currentUser?.uid ?? "",
+                    "uid_mascota": "",
+                    "Cita": false
                 ]) { err in
                     if let err = err {
                         print("Error adding document: \(err)")
                     } else {
                         print("Document added with ID: \(ref2!.documentID)")
+                        let query = self.db.collection("Mascotas").document(ref2!.documentID)
+                       
+                        // Set the "capital" field of the city 'DC'
+                        query.updateData([
+                            "uid_mascota": ref2!.documentID
+                        ]) { err in
+
+                        }
                     }
                 }
                 self.performSegue(withIdentifier: "backk", sender: self)

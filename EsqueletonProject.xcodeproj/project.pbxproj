@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		585968AD2764BA4F009370EC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 585968AC2764BA4F009370EC /* GoogleService-Info.plist */; };
-		585968C62764C902009370EC /* HomeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585968C42764C902009370EC /* HomeeViewController.swift */; };
-		585968C72764C902009370EC /* HomeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 585968C52764C902009370EC /* HomeeViewController.xib */; };
 		585968FB27657573009370EC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585968FA27657573009370EC /* MainViewController.swift */; };
 		5859690727657743009370EC /* MascotaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5859690527657743009370EC /* MascotaTableViewCell.swift */; };
 		5859690827657743009370EC /* MascotaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5859690627657743009370EC /* MascotaTableViewCell.xib */; };
 		58FAD47A27657FCE00591843 /* Mascota.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD47927657FCE00591843 /* Mascota.swift */; };
 		58FAD4A12765A6EB00591843 /* AddMascotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD4A02765A6EB00591843 /* AddMascotaViewController.swift */; };
 		58FAD4D22767207D00591843 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD4D12767207D00591843 /* MapaViewController.swift */; };
+		58FAD4D5276B0C2300591843 /* editMascotaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD4D4276B0C2300591843 /* editMascotaViewController.swift */; };
+		58FAD4DB276B332000591843 /* CitaTrueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD4DA276B331E00591843 /* CitaTrueViewController.swift */; };
+		58FAD4DE276B334600591843 /* CitaFalseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FAD4DD276B334600591843 /* CitaFalseViewController.swift */; };
 		6C2EBAAA25A7AAC900A6445B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EBAA925A7AAC900A6445B /* AppDelegate.swift */; };
 		6C2EBAAC25A7AAC900A6445B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EBAAB25A7AAC900A6445B /* SceneDelegate.swift */; };
 		6C2EBAAE25A7AAC900A6445B /* HomeLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EBAAD25A7AAC900A6445B /* HomeLoginViewController.swift */; };
@@ -24,20 +25,20 @@
 		6C2EBAB625A7AACA00A6445B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C2EBAB425A7AACA00A6445B /* LaunchScreen.storyboard */; };
 		6C2EBAE825A7DB4600A6445B /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2EBAE725A7DB4600A6445B /* RegistroViewController.swift */; };
 		6C79DE4525AF57C500BBC3CD /* EditarPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C79DE4425AF57C500BBC3CD /* EditarPerfilViewController.swift */; };
-		6CC0979025A7E24200A6F4BE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC0978F25A7E24200A6F4BE /* LoginViewController.swift */; };
 		8563CA270B6CB5B9398A355D /* Pods_EsqueletonProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 963416E6394C982BC1090959 /* Pods_EsqueletonProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		585968AC2764BA4F009370EC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		585968C42764C902009370EC /* HomeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeeViewController.swift; sourceTree = "<group>"; };
-		585968C52764C902009370EC /* HomeeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeeViewController.xib; sourceTree = "<group>"; };
 		585968FA27657573009370EC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5859690527657743009370EC /* MascotaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MascotaTableViewCell.swift; sourceTree = "<group>"; };
 		5859690627657743009370EC /* MascotaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MascotaTableViewCell.xib; sourceTree = "<group>"; };
 		58FAD47927657FCE00591843 /* Mascota.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mascota.swift; sourceTree = "<group>"; };
 		58FAD4A02765A6EB00591843 /* AddMascotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMascotaViewController.swift; sourceTree = "<group>"; };
 		58FAD4D12767207D00591843 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		58FAD4D4276B0C2300591843 /* editMascotaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = editMascotaViewController.swift; sourceTree = "<group>"; };
+		58FAD4DA276B331E00591843 /* CitaTrueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitaTrueViewController.swift; sourceTree = "<group>"; };
+		58FAD4DD276B334600591843 /* CitaFalseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitaFalseViewController.swift; sourceTree = "<group>"; };
 		6C2EBAA625A7AAC900A6445B /* EsqueletonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EsqueletonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C2EBAA925A7AAC900A6445B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C2EBAAB25A7AAC900A6445B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		6C2EBAB725A7AACA00A6445B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C2EBAE725A7DB4600A6445B /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		6C79DE4425AF57C500BBC3CD /* EditarPerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPerfilViewController.swift; sourceTree = "<group>"; };
-		6CC0978F25A7E24200A6F4BE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		963416E6394C982BC1090959 /* Pods_EsqueletonProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EsqueletonProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3F25BE8982EDA0CDC0532B /* Pods-EsqueletonProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsqueletonProject.release.xcconfig"; path = "Target Support Files/Pods-EsqueletonProject/Pods-EsqueletonProject.release.xcconfig"; sourceTree = "<group>"; };
 		DB91254CA8F86AD4FDB4F2D5 /* Pods-EsqueletonProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EsqueletonProject.debug.xcconfig"; path = "Target Support Files/Pods-EsqueletonProject/Pods-EsqueletonProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -95,17 +95,17 @@
 				6C2EBAB425A7AACA00A6445B /* LaunchScreen.storyboard */,
 				6C2EBAB725A7AACA00A6445B /* Info.plist */,
 				6C2EBAE725A7DB4600A6445B /* RegistroViewController.swift */,
-				6CC0978F25A7E24200A6F4BE /* LoginViewController.swift */,
 				585968AC2764BA4F009370EC /* GoogleService-Info.plist */,
 				6C79DE4425AF57C500BBC3CD /* EditarPerfilViewController.swift */,
-				585968C42764C902009370EC /* HomeeViewController.swift */,
-				585968C52764C902009370EC /* HomeeViewController.xib */,
 				585968FA27657573009370EC /* MainViewController.swift */,
 				5859690527657743009370EC /* MascotaTableViewCell.swift */,
 				5859690627657743009370EC /* MascotaTableViewCell.xib */,
 				58FAD47927657FCE00591843 /* Mascota.swift */,
 				58FAD4A02765A6EB00591843 /* AddMascotaViewController.swift */,
 				58FAD4D12767207D00591843 /* MapaViewController.swift */,
+				58FAD4D4276B0C2300591843 /* editMascotaViewController.swift */,
+				58FAD4DA276B331E00591843 /* CitaTrueViewController.swift */,
+				58FAD4DD276B334600591843 /* CitaFalseViewController.swift */,
 			);
 			path = EsqueletonProject;
 			sourceTree = "<group>";
@@ -187,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C2EBAB625A7AACA00A6445B /* LaunchScreen.storyboard in Resources */,
-				585968C72764C902009370EC /* HomeeViewController.xib in Resources */,
 				5859690827657743009370EC /* MascotaTableViewCell.xib in Resources */,
 				585968AD2764BA4F009370EC /* GoogleService-Info.plist in Resources */,
 				6C2EBAB325A7AACA00A6445B /* Assets.xcassets in Resources */,
@@ -245,17 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				58FAD47A27657FCE00591843 /* Mascota.swift in Sources */,
+				58FAD4D5276B0C2300591843 /* editMascotaViewController.swift in Sources */,
 				58FAD4D22767207D00591843 /* MapaViewController.swift in Sources */,
-				6CC0979025A7E24200A6F4BE /* LoginViewController.swift in Sources */,
+				58FAD4DE276B334600591843 /* CitaFalseViewController.swift in Sources */,
 				6C2EBAAE25A7AAC900A6445B /* HomeLoginViewController.swift in Sources */,
 				6C79DE4525AF57C500BBC3CD /* EditarPerfilViewController.swift in Sources */,
 				6C2EBAAA25A7AAC900A6445B /* AppDelegate.swift in Sources */,
 				6C2EBAAC25A7AAC900A6445B /* SceneDelegate.swift in Sources */,
+				58FAD4DB276B332000591843 /* CitaTrueViewController.swift in Sources */,
 				585968FB27657573009370EC /* MainViewController.swift in Sources */,
 				5859690727657743009370EC /* MascotaTableViewCell.swift in Sources */,
 				58FAD4A12765A6EB00591843 /* AddMascotaViewController.swift in Sources */,
 				6C2EBAE825A7DB4600A6445B /* RegistroViewController.swift in Sources */,
-				585968C62764C902009370EC /* HomeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@ class MascotaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         backView.layer.masksToBounds = false
-        backView.layer.cornerRadius = 5
+        backView.layer.cornerRadius = 15
         backView.layer.shadowColor = UIColor.black.cgColor
         backView.layer.shadowOpacity = 0.5
         backView.layer.shadowOffset = .zero

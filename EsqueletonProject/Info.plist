@@ -66,7 +66,11 @@
 	<string>Permitenos acceder a tu camara para poder tomar foto de perfil</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Permitenos acceder a tu biblioteca de fotos para seleccionar una foto para tu perfil</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>permiso para acceder a tu ubicacion </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>permiso para acceder a tu ubi</string>
+	<string>permiso para acceder a tu ubicacion</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Permiso para acceder a tu ubicacion</string>
 </dict>
 </plist>

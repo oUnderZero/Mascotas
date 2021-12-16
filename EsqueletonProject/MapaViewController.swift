@@ -15,23 +15,49 @@ class MapaViewController: UIViewController, MKMapViewDelegate, CLLocationManager
     @IBOutlet weak var mapMK: MKMapView!
     var longitude: CLLocationDegrees?
     
+    private let locationManager = CLLocationManager()
     var altitude: Double?
     
     var manager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        manager.delegate = self
         mapMK.delegate = self
-       
+        manager.requestWhenInUseAuthorization()
+        manager.requestLocation()
         //mejorar la precision de la ubicacion
-       
+        manager.desiredAccuracy = kCLLocationAccuracyBest
         //    con este metodo se ira actualizando la ubicacion del usuario
-       
+        manager.startUpdatingLocation()
         mapMK.mapType = .standard
-ubi()        // Do any additional setup after loading the view.
+       // Do any additional setup after loading the view.
     }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let render = MKPolylineRenderer(overlay: overlay as! MKPolyline)
+        render.strokeColor = .blue
+        return render
+    }
+ 
     
-    func ubi(){
+  
+    @IBAction func UbicacionBtn(_ sender: Any) {
+        ubi()
+        let location = CLLocationCoordinate2D(latitude: latitude ?? 0, longitude: longitude ?? 0)
+        
+        let spanMap = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        
+        let region = MKCoordinateRegion(center: location, span: spanMap)
+        
+        mapMK.setRegion(region, animated: true)
+        
+        mapMK.showsUserLocation = true
+    }
+  
+   
+    
+   
+    private func ubi(){
         let direction: String? = direccion
         let geocoder = CLGeocoder()
         
@@ -48,7 +74,7 @@ ubi()        // Do any additional setup after loading the view.
                     annotation.coordinate = (place?.location?.coordinate)!
                     annotation.title = direction
                     
-                    let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
+                    let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
                     
                     let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
                     
@@ -61,7 +87,10 @@ ubi()        // Do any additional setup after loading the view.
 
                     let annotations = self.mapMK.annotations
                     
-                    //self.makeRoute(destinationCoordinates: destinationRoute.coordinate)
+                    	
+                    self.mapMK.removeOverlays(overlays)
+                    self.mapMK.removeAnnotations(annotations)
+                    self.makeRoute(destinationCoordinates: destinationRoute.coordinate)
                     
                 } else {
                     print("Error al encontrar la dirección: \(String(describing: error?.localizedDescription))")
@@ -102,12 +131,8 @@ ubi()        // Do any additional setup after loading the view.
             self.mapMK.setVisibleMapRect(route.polyline.boundingMapRect, animated: true)
         }
     }
-    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        print("se obtuvo la ubicacion del usuario")
-    }
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("hubo error al obtener la ubicacion \(error.localizedDescription)")
-    }
+    
+     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         guard let location = locations.first else {
@@ -116,6 +141,12 @@ ubi()        // Do any additional setup after loading the view.
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
         altitude = location.altitude
+    }
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        print("se obtuvo la ubicacion del usuario")
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("hubo error al obtener la ubicacion")
     }
 
     /*
@@ -129,3 +160,5 @@ ubi()        // Do any additional setup after loading the view.
     */
 
 }
+
+ 

@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 struct  Mascota {
+    let uid_mascota: String
     let Raza: String
     let Nombre: String
     let Edad: String
+    let Peso: String
+    let Cita: Bool
     let id_imagen: String
-    // let image: UIImage?
+  
 }

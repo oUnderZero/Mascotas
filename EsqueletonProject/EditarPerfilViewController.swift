@@ -105,6 +105,7 @@ class EditarPerfilViewController: UIViewController {
                             print("Error getting documents: \(err)")
                         } else {
                             for documento in querySnapshot!.documents {
+                                
                                 let query2 = self.db.collection("Usuarios").document(documento.documentID)
                                 query2.updateData([
                                     "email": self.nombreTextField.text!
