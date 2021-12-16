@@ -130,10 +130,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                     print("Error removing document: \(err)")
                 } else {
                     print("Document successfully removed!")
-                    self.mascotas.remove(at: indexPath.row)
-                    self.MascotasTable.reloadData()
                 }
             }
+            self.mascotas.remove(at: indexPath.row)
+            self.MascotasTable.reloadData()
+
            
         }
         
